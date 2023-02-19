@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import styles from '@/styles/layout.module.css'
 import { ReactNode } from 'react'
 import Link from 'next/link'
 
@@ -25,7 +24,7 @@ export function DefaultLayout({ title, description, children }: Props) {
       <header>
         <Link href='/'>manas diary</Link>
       </header>
-      <main className={styles.main}>{children}</main>
+      <main>{children}</main>
       <footer>
         <Link href='https://manasas.dev/'>© 2023 Manami SASAKI</Link>
       </footer>

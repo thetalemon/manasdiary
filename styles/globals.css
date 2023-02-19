@@ -144,7 +144,7 @@ footer {
 main {
   max-width: 800px;
   padding: 24px 16px;
-  min-height: calc(100vh - 35px - 32px - 24px);
+  min-height: calc(100vh - 32px - 32px);
   margin: 0 auto;
 }
 @media only screen and (max-width: 500px) {
