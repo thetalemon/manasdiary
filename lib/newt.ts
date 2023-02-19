@@ -1,5 +1,5 @@
 import { createClient } from 'newt-client-js'
-import type { ArticleSummary, ArticleDetail } from '@/types/article'
+import type { Article, ArticleDetail } from '@/types/article'
 
 const client = createClient({
   spaceUid: process.env.NEWT_SPACE_UID + '',
@@ -8,24 +8,24 @@ const client = createClient({
 })
 
 export const getArticles = async () => {
-    const { items } = await client.getContents<ArticleSummary>({
+  const { items } = await client.getContents<Article>({
     appUid: 'manas-diary',
     modelUid: 'article',
     query: {
-        select: ['_id', 'title', 'slug', 'icon','summary'],
+      select: ['_id', 'title', 'slug', 'icon', 'summary'],
     },
-    })
-    return items
+  })
+  return items
 }
 
 export const getArticleBySlug = async (slug: string) => {
-    const article = await client.getFirstContent<ArticleDetail>({
+  const article = await client.getFirstContent<ArticleDetail>({
     appUid: 'manas-diary',
     modelUid: 'article',
     query: {
-        slug,
-        select: ['_id', 'title', 'slug', 'body', 'icon'],
+      slug,
+      select: ['_id', 'title', 'slug', 'body', 'icon'],
     },
-    })
-    return article
+  })
+  return article
 }

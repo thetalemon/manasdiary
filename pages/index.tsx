@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import styles from '@/styles/Home.module.css'
 import { getArticles } from '@/lib/newt'
-import type { ArticleSummary } from '@/types/article'
+import type { Article } from '@/types/article'
 import { DefaultLayout } from '@/src/layouts/defaultLayout'
 
-export default function Home({ articles }: { articles: ArticleSummary[] }) {
+export default function Home({ articles }: { articles: Article[] }) {
   return (
     <>
       <DefaultLayout

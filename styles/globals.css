@@ -110,12 +110,12 @@ img {
   width: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1:not(:first-child),
+h2:not(:first-child),
+h3:not(:first-child),
+h4:not(:first-child),
+h5:not(:first-child),
+h6:not(:first-child) {
   margin-top: 1.5rem;
 }
 
@@ -143,7 +143,7 @@ footer {
 }
 main {
   max-width: 800px;
-  padding: 0px 16px;
+  padding: 24px 16px;
   min-height: calc(100vh - 35px - 32px - 24px);
   margin: 0 auto;
 }
