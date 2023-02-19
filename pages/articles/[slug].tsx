@@ -12,7 +12,7 @@ export default function Article({ article }: { article: ArticleDetail }) {
         <meta name="description" content="投稿詳細ページです" />
       </Head>
       <main className={styles.main}>
-        <h1>{article.title}</h1>
+        <h1>{article.icon.value}{article.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: article.body }} />
       </main>
     </>
