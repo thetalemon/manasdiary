@@ -12,15 +12,18 @@ export default function Home({ articles }: { articles: ArticleSummary[] }) {
         <meta name="description" content="NewtとNext.jsを利用したブログです" />
       </Head>
       <main className={styles.main}>
-        <ul>
-          {articles.map((article) => {
-            return (
-              <li key={article._id}>
-                <Link href={`articles/${article.slug}`}>{article.title}</Link>
-              </li>
-            )
-          })}
-        </ul>
+        <h1>まなさすの日記</h1>
+        <section className={styles.mainContents}>
+          <ul>
+            {articles.map((article) => {
+              return (
+                <li key={article._id}>
+                  <Link href={`articles/${article.slug}`}>{article.icon.value} {article.title}</Link>
+                </li>
+              )
+            })}
+          </ul>
+        </section>
       </main>
     </>
   )
