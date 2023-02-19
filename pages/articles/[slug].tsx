@@ -2,9 +2,9 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import { getArticles, getArticleBySlug } from '@/lib/newt'
-import type { Article } from '@/types/article'
+import type { ArticleDetail } from '@/types/article'
 
-export default function Article({ article }: { article: Article }) {
+export default function Article({ article }: { article: ArticleDetail }) {
   return (
     <>
       <Head>

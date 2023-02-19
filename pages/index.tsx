@@ -2,9 +2,9 @@ import Head from 'next/head'
 import Link from 'next/link'
 import styles from '@/styles/Home.module.css'
 import { getArticles } from '@/lib/newt'
-import type { Article } from '@/types/article'
+import type { ArticleSummary } from '@/types/article'
 
-export default function Home({ articles }: { articles: Article[] }) {
+export default function Home({ articles }: { articles: ArticleSummary[] }) {
   return (
     <>
       <Head>
