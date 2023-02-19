@@ -8,11 +8,11 @@ export default function Home({ articles }: { articles: ArticleSummary[] }) {
   return (
     <>
       <Head>
-        <title>Newt・Next.jsブログ</title>
-        <meta name="description" content="NewtとNext.jsを利用したブログです" />
+        <title>manas diary</title>
+        <meta name="description" content="まなさすの日記。やったこと、読んだ本、色々。" />
       </Head>
       <main className={styles.main}>
-        <h1>まなさすの日記</h1>
+        <h1>manas diary</h1>
         <section className={styles.mainContents}>
           <ul>
             {articles.map((article) => {
