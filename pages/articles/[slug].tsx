@@ -13,7 +13,9 @@ export default function Article({ article }: { article: ArticleDetail }) {
       </Head>
       <main className={styles.main}>
         <h1>{article.icon.value}{article.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: article.body }} />
+        <section className={styles.detailMain}>
+          <div dangerouslySetInnerHTML={{ __html: article.body }} />
+        </section>
       </main>
     </>
   )
