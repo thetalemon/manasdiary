@@ -17,8 +17,15 @@ export default function Home({ articles }: { articles: ArticleSummary[] }) {
           <ul>
             {articles.map((article) => {
               return (
-                <li key={article._id}>
-                  <Link href={`articles/${article.slug}`}>{article.icon.value} {article.title}</Link>
+                <li key={article._id} className={styles.card}>
+                  <Link href={`articles/${article.slug}`}>
+                    <p className={styles.cardTitle}>
+                      {article.icon.value} {article.title}
+                    </p>
+                    <p className={styles.cardSummary}>
+                      {article.summary}
+                    </p>
+                  </Link>
                 </li>
               )
             })}
