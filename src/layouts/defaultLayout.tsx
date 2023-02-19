@@ -23,10 +23,9 @@ export function DefaultLayout({ title, description, children }: Props) {
         <meta name='description' content={description} />
       </Head>
       <header>
-        <h1>Mana's sandbox</h1>
+        <Link href='/'>manas diary</Link>
       </header>
       <main className={styles.main}>{children}</main>
-
       <footer>
         <Link href='https://manasas.dev/'>© 2023 Manami SASAKI</Link>
       </footer>
