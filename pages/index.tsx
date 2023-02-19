@@ -9,7 +9,10 @@ export default function Home({ articles }: { articles: ArticleSummary[] }) {
     <>
       <Head>
         <title>manas diary</title>
-        <meta name="description" content="まなさすの日記。やったこと、読んだ本、色々。" />
+        <meta
+          name='description'
+          content='まなさすの日記。やったこと、読んだ本、色々。'
+        />
       </Head>
       <main className={styles.main}>
         <h1>manas diary</h1>
@@ -22,9 +25,7 @@ export default function Home({ articles }: { articles: ArticleSummary[] }) {
                     <p className={styles.cardTitle}>
                       {article.icon.value} {article.title}
                     </p>
-                    <p className={styles.cardSummary}>
-                      {article.summary}
-                    </p>
+                    <p className={styles.cardSummary}>{article.summary}</p>
                   </Link>
                 </li>
               )
