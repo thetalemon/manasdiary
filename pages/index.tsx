@@ -1,20 +1,16 @@
-import Head from 'next/head'
 import Link from 'next/link'
 import styles from '@/styles/Home.module.css'
 import { getArticles } from '@/lib/newt'
 import type { ArticleSummary } from '@/types/article'
+import { DefaultLayout } from '@/src/layouts/defaultLayout'
 
 export default function Home({ articles }: { articles: ArticleSummary[] }) {
   return (
     <>
-      <Head>
-        <title>manas diary</title>
-        <meta
-          name='description'
-          content='まなさすの日記。やったこと、読んだ本、色々。'
-        />
-      </Head>
-      <main className={styles.main}>
+      <DefaultLayout
+        title='manas diary'
+        description='まなさすの日記。やったこと、読んだ本、色々。'
+      >
         <h1>manas diary</h1>
         <section className={styles.mainContents}>
           <ul>
@@ -32,7 +28,7 @@ export default function Home({ articles }: { articles: ArticleSummary[] }) {
             })}
           </ul>
         </section>
-      </main>
+      </DefaultLayout>
     </>
   )
 }

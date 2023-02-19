@@ -109,10 +109,46 @@ a {
 img {
   width: 100%;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 1.5rem;
 }
 
 ul {
   list-style: none;
+}
+
+header {
+  background: #44617b;
+  color: #fff;
+  vertical-align: baseline;
+  padding: 4px 8px;
+}
+header > h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 300;
+}
+footer {
+  background: #44617b;
+  color: #fff;
+  vertical-align: baseline;
+  text-align: center;
+  padding: 4px 8px;
+}
+main {
+  max-width: 800px;
+  padding: 0px 16px;
+  min-height: calc(100vh - 35px - 32px - 24px);
+  margin: 0 auto;
+}
+@media only screen and (max-width: 500px) {
+  header > h1 {
+    font-size: 18px;
+  }
 }
