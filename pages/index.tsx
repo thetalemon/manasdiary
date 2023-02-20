@@ -3,6 +3,7 @@ import styles from '@/styles/Home.module.css'
 import { getArticles } from '@/lib/newt'
 import type { Article } from '@/types/article'
 import { DefaultLayout } from '@/src/layouts/defaultLayout'
+import { TagList } from '@/src/components/tagList/tagList'
 
 export default function Home({ articles }: { articles: Article[] }) {
   return (
@@ -22,6 +23,7 @@ export default function Home({ articles }: { articles: Article[] }) {
                       {article.icon.value} {article.title}
                     </p>
                     <p className={styles.cardSummary}>{article.summary}</p>
+                    <TagList tags={article.tags} />
                   </Link>
                 </li>
               )
