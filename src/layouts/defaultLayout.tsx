@@ -20,7 +20,7 @@ export function DefaultLayout({ title, description, children }: Props) {
         <meta property='og:description' content={description} />
         <meta
           property='og:image'
-          content={`http://localhost:3000/api/og?title=${title}`}
+          content={`https://diary.manasas.dev/api/og?title=${title}`}
         />
         <title>{title}</title>
         <meta name='description' content={description} />
