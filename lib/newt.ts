@@ -24,7 +24,7 @@ export const getArticleBySlug = async (slug: string) => {
     modelUid: 'article',
     query: {
       slug,
-      select: ['_id', 'title', 'slug', 'tags', 'body', 'icon'],
+      select: ['_id', 'title', 'slug', 'tags', 'body', 'icon', 'summary'],
     },
   })
   return article
