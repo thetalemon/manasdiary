@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from '@/styles/Home.module.css'
+import styles from '@/styles/Home.module.scss'
 import { getArticles } from '@/lib/newt'
 import type { Article } from '@/types/article'
 import { DefaultLayout } from '@/src/layouts/defaultLayout'

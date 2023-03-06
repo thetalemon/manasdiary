@@ -1,5 +1,5 @@
 import type { Tag } from '@/types/article'
-import styles from './tagList.module.css'
+import styles from './tagList.module.scss'
 
 interface Props {
   tags: Tag[]

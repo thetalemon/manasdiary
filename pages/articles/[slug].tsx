@@ -1,4 +1,4 @@
-import styles from '@/styles/Home.module.css'
+import styles from '@/styles/Home.module.scss'
 import { getArticles, getArticleBySlug } from '@/lib/newt'
 import type { ArticleDetail } from '@/types/article'
 import { DefaultLayout } from '@/src/layouts/defaultLayout'
