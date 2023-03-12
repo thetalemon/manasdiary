@@ -14,10 +14,7 @@ export type Article = {
   title: string
   summary: string
   slug: string
-  tags: Tag[]
-  publishdate: string[]
-}
-
-export type ArticleDetail = Article & {
   body: string
+  tags: Tag[]
+  publishDate: string
 }

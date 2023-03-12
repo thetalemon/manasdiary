@@ -1,9 +1,9 @@
 import styles from '@/styles/Home.module.scss'
 import { getArticles, getArticleBySlug } from '@/lib/newt'
-import type { ArticleDetail } from '@/types/article'
+import type { Article } from '@/types/article'
 import { DefaultLayout } from '@/src/layouts/defaultLayout'
 
-export default function Article({ article }: { article: ArticleDetail }) {
+export default function Article({ article }: { article: Article }) {
   return (
     <>
       <DefaultLayout
