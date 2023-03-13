@@ -1,5 +1,6 @@
 import { ImageResponse } from '@vercel/og'
 import { NextRequest } from 'next/server'
+import { myUrl, mySiteName } from '@/constants/constants'
 
 export const config = {
   runtime: 'experimental-edge',
@@ -18,7 +19,7 @@ export default function handler(req: NextRequest) {
       (
         <div
           style={{
-            backgroundImage: 'url(https://diary.manasas.dev/ogbg.png)',
+            backgroundImage: `url(${myUrl}/ogbg.png)`,
             backgroundColor: '#fff',
             backgroundSize: '100% 100%',
             height: '100%',
@@ -56,7 +57,7 @@ export default function handler(req: NextRequest) {
               lineHeight: 1.3,
             }}
           >
-            manas diary
+            {mySiteName}
           </div>
         </div>
       ),

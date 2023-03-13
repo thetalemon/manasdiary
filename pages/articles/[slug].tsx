@@ -2,13 +2,15 @@ import styles from '@/styles/Home.module.scss'
 import { getArticles, getArticleBySlug } from '@/lib/newt'
 import type { Article } from '@/types/article'
 import { DefaultLayout } from '@/src/layouts/defaultLayout'
+import { myUrl, mySiteName } from '@/constants/constants'
 
 export default function Article({ article }: { article: Article }) {
   return (
     <>
       <DefaultLayout
-        title={`${article.title} | manas diary`}
+        title={`${article.title} | ${mySiteName}`}
         description={article.summary}
+        url={`${myUrl}/articles/${article.slug}`}
       >
         <h1>
           {article.icon.value} {article.title}

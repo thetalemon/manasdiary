@@ -4,15 +4,21 @@ import { getArticles } from '@/lib/newt'
 import type { Article } from '@/types/article'
 import { DefaultLayout } from '@/src/layouts/defaultLayout'
 import { TagList } from '@/src/components/tagList/tagList'
+import {
+  myUrl,
+  mySiteDefaultDescription,
+  mySiteName,
+} from '@/constants/constants'
 
 export default function Home({ articles }: { articles: Article[] }) {
   return (
     <>
       <DefaultLayout
-        title='manas diary'
-        description='まなさすの日記。やったこと、読んだ本、色々。'
+        title={mySiteName}
+        description={mySiteDefaultDescription}
+        url={myUrl}
       >
-        <h1>manas diary</h1>
+        <h1>{mySiteName}</h1>
         <section className={styles.mainContents}>
           <ul>
             {articles.map((article) => {

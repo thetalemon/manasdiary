@@ -1,19 +1,20 @@
 import { Feed } from 'feed'
 import { getArticles } from '@/lib/newt'
+import { myUrl, myName, mySiteName, myCopyLight } from '@/constants/constants'
 
 export const generateFeed = async () => {
-  const baseUrl = 'https://diary.manasas.dev/'
+  const baseUrl = myUrl
 
   const feed = new Feed({
-    title: 'manasdiary',
+    title: mySiteName,
     description: '',
     id: baseUrl,
     link: baseUrl,
     language: 'ja',
-    copyright: `© 2023 manasas`,
+    copyright: myCopyLight,
     updated: new Date(),
     author: {
-      name: 'manasas',
+      name: myName,
     },
     feed: `${baseUrl}/feed`,
   })
