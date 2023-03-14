@@ -25,4 +25,15 @@
 }
 .mainContents {
   margin-top: 2rem;
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  img {
+    max-height: 400px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+  }
 }
