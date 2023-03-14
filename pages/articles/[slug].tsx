@@ -3,6 +3,7 @@ import { getArticles, getArticleBySlug } from '@/lib/newt'
 import type { Article } from '@/types/article'
 import { DefaultLayout } from '@/src/layouts/defaultLayout'
 import { myUrl, mySiteName } from '@/constants/constants'
+import { TagList } from '@/src/components/tagList/tagList'
 
 export default function Article({ article }: { article: Article }) {
   return (
@@ -15,6 +16,9 @@ export default function Article({ article }: { article: Article }) {
         <h1>
           {article.icon.value} {article.title}
         </h1>
+        <section className={styles.articleInfo}>
+          <TagList tags={article.tags} />
+        </section>
         <section className={styles.mainContents}>
           <div dangerouslySetInnerHTML={{ __html: article.body }} />
         </section>
