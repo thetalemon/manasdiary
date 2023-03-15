@@ -21,7 +21,7 @@ export function DefaultLayout({ title, description, children, url }: Props) {
         <meta property='og:url' content={url} />
         <meta property='og:description' content={description} />
         <meta property='og:image' content={`${myUrl}/api/og?title=${title}`} />
-        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:card' content='summary' />
         <meta name='twitter:site' content='@thetalemon' />
         <meta name='twitter:domain' content={myDomain} />
         <meta name='twitter:title' content={title} />
