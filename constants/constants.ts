@@ -1,4 +1,5 @@
-export const myUrl = 'https://diary.manasas.dev'
+export const myDomain = 'diary.manasas.dev'
+export const myUrl = `https://${myDomain}`
 export const myName = 'manasas'
 export const mySiteName = 'manas diary'
 export const mySiteDefaultDescription = 'まなさすの雑記。どうでもいいこと。'
