@@ -22,18 +22,26 @@
 
 .articleInfo {
   margin-top: 1rem;
+  display: flex;
+  flex-direction: row-reverse;
 }
-.mainContents {
-  margin-top: 2rem;
 
-  p {
-    margin-bottom: 1.5rem;
-  }
+.articleMain {
+  background: white;
+  padding: 16px;
+  border-radius: 6px;
+  .mainContents {
+    margin-top: 1rem;
 
-  img {
-    max-height: 400px;
-    width: auto;
-    display: block;
-    margin: 0 auto;
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    img {
+      max-height: 400px;
+      width: auto;
+      display: block;
+      margin: 0 auto;
+    }
   }
 }

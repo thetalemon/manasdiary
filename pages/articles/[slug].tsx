@@ -13,14 +13,16 @@ export default function Article({ article }: { article: Article }) {
         description={article.summary}
         url={`${myUrl}/articles/${article.slug}`}
       >
-        <h1>
-          {article.icon.value} {article.title}
-        </h1>
-        <section className={styles.articleInfo}>
-          <TagList tags={article.tags} />
-        </section>
-        <section className={styles.mainContents}>
-          <div dangerouslySetInnerHTML={{ __html: article.body }} />
+        <section className={styles.articleMain}>
+          <h1>
+            {article.icon.value} {article.title}
+          </h1>
+          <section className={styles.articleInfo}>
+            <TagList tags={article.tags} />
+          </section>
+          <section className={styles.mainContents}>
+            <div dangerouslySetInnerHTML={{ __html: article.body }} />
+          </section>
         </section>
       </DefaultLayout>
     </>
