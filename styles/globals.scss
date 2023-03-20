@@ -116,8 +116,10 @@ header {
   background: #44617b;
   color: #fff;
   vertical-align: baseline;
-  padding: 4px 8px;
-  & > h1 {
+  & > a {
+    display: block;
+    width: 100%;
+    padding: 4px 8px;
     margin: 0;
     font-size: 18px;
     font-weight: 300;
