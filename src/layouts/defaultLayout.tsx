@@ -1,7 +1,13 @@
 import Head from 'next/head'
-import { ReactNode } from 'react'
+import { ReactNode, useEffect, useState } from 'react'
 import Link from 'next/link'
-import { myUrl, myDomain, mySiteName, myCopyLight } from '@/constants/constants'
+import {
+  myUrl,
+  myMainUrl,
+  myDomain,
+  mySiteName,
+  myCopyLight,
+} from '@/constants/constants'
 
 interface Props {
   title: string
@@ -11,6 +17,12 @@ interface Props {
 }
 
 export function DefaultLayout({ title, description, children, url }: Props) {
+  const [path, setPath] = useState('')
+
+  useEffect(() => {
+    setPath(location.pathname)
+  }, [])
+
   return (
     <>
       <Head>
@@ -30,11 +42,15 @@ export function DefaultLayout({ title, description, children, url }: Props) {
         <meta name='description' content={description} />
       </Head>
       <header>
-        <Link href='/'>{mySiteName}</Link>
+        {path !== '/' ? (
+          <Link href='/'>{mySiteName}</Link>
+        ) : (
+          <h1>{mySiteName}</h1>
+        )}
       </header>
       <main>{children}</main>
       <footer>
-        <Link href={myUrl}>{myCopyLight}</Link>
+        <Link href={myMainUrl}>{myCopyLight}</Link>
       </footer>
     </>
   )
