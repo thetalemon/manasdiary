@@ -1,0 +1,24 @@
+.articleList {
+  margin-top: 8px;
+  .articleListItem {
+    background-color: white;
+    border-radius: 6px;
+    padding: 8px;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.1);
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    .cardTitle {
+      font-size: 1.2rem;
+    }
+
+    .cardSummary {
+      margin-top: 4px;
+    }
+  }
+}
