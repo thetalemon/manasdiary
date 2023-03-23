@@ -1,6 +1,6 @@
 import styles from '@/styles/Home.module.scss'
-import { getTags, getArticleByTag } from '@/lib/newt'
-import type { Article } from '@/types/article'
+import { getTags, getArticleByTag, getTagBySlug } from '@/lib/newt'
+import type { Article, Tag } from '@/types/article'
 import { DefaultLayout } from '@/src/layouts/defaultLayout'
 import {
   myUrl,
@@ -9,7 +9,13 @@ import {
 } from '@/constants/constants'
 import { ArticleList } from '@/src/components/articleList/articleList'
 
-export default function Article({ articles }: { articles: Article[] }) {
+export default function Article({
+  articles,
+  tag,
+}: {
+  articles: Article[]
+  tag: Tag
+}) {
   return (
     <>
       <DefaultLayout
@@ -17,7 +23,7 @@ export default function Article({ articles }: { articles: Article[] }) {
         description={mySiteDefaultDescription}
         url={myUrl}
       >
-        <h1>{mySiteName}</h1>
+        <h2>#{tag.name}</h2>
         <section className={styles.mainContents}>
           <ArticleList artcileList={articles} />
         </section>
@@ -45,9 +51,11 @@ export const getStaticProps = async ({
 }) => {
   const { slug } = params
   const articles = await getArticleByTag(slug)
+  const tag = await getTagBySlug(slug)
   return {
     props: {
       articles,
+      tag,
     },
   }
 }
