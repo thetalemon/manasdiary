@@ -6,5 +6,9 @@
     background-color: #e6f4ff;
     padding: 4px;
     border-radius: 6px;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
   }
 }
