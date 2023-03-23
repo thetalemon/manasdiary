@@ -18,8 +18,8 @@ export function ArticleList({ artcileList }: Props) {
                 {article.icon.value} {article.title}
               </p>
               <p className={styles.cardSummary}>{article.summary}</p>
-              <TagList tags={article.tags} />
             </Link>
+            <TagList tags={article.tags} />
           </li>
         )
       })}
