@@ -1,7 +1,7 @@
 .articleList {
   margin-top: 8px;
   .articleListItem {
-    background-color: white;
+    background-color: rgb(var(--card-bg-rgb));
     border-radius: 6px;
     padding: 8px;
     box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.1);

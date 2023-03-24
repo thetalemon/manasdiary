@@ -5,8 +5,10 @@
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 214, 219, 220;
+  --foreground-rgb: 53, 53, 53;
+  --background-rgb: 246, 248, 248;
+  --card-bg-rgb: 255, 255, 255;
+  --link-rgb: 46, 134, 193;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -41,8 +43,10 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
+    --foreground-rgb: 211, 211, 211;
     --background-rgb: 0, 0, 0;
+    --card-bg-rgb: 33, 44, 53;
+    --link-rgb: 77, 158, 213;
 
     --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
     --secondary-glow: linear-gradient(
@@ -130,7 +134,7 @@ footer {
 header,
 footer {
   background: #44617b;
-  color: #fff;
+  color: rgb(240, 240, 240);
   & > a,
   h1 {
     display: block;
