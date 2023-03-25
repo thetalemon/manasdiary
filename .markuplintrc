@@ -1,0 +1,50 @@
+{
+  "parser": {
+    ".tsx$": "@markuplint/jsx-parser"
+  },
+  "specs": {
+    ".tsx$": "@markuplint/react-spec"
+  },
+  "rules": {
+    "no-refer-to-non-existent-id": true,
+    "use-list": false,
+    "wai-aria": true,
+    "label-has-control": false,
+    "ineffective-attr": false,
+    "class-naming": false,
+    "disallowed-element": true,
+    "required-element": true,
+    "required-h1": true,
+    "attr-duplication": true,
+    "no-hard-code-id": false,
+    "require-accessible-name": true,
+    "require-datetime": true,
+    "id-duplication": true,
+    "landmark-roles": false,
+    "deprecated-element": true,
+    "case-sensitive-tag-name": false,
+    "no-use-event-handler-attr": false,
+    "placeholder-label-option": true,
+    "end-tag": false,
+    "no-default-value": false,
+    "permitted-contents": true,
+    "deprecated-attr": true,
+    "no-empty-palpable-content": false,
+    "invalid-attr": true,
+    "required-attr": true,
+    "case-sensitive-attr-name": false,
+    "doctype": "always",
+    "character-reference": true,
+    "attr-value-quotes": false,
+    "no-boolean-attr-value": false
+  },
+  "nodeRules": [
+    {
+      "selector": "meta[property]",
+      "rules": {
+        "required-attr": false,
+        "invalid-attr": false
+      }
+    }
+  ]
+}
