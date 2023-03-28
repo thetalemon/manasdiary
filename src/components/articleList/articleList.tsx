@@ -1,7 +1,7 @@
 import type { Article } from '@/types/article'
 import styles from './articleList.module.scss'
 import Link from 'next/link'
-import { TagList } from '@/src/components/tagList/tagList'
+import { TagList } from '../tagList/tagList'
 
 interface Props {
   artcileList: Article[]
