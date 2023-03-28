@@ -1,13 +1,12 @@
-.articleInfo {
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: row-reverse;
-}
-
 .articleMain {
   background: rgb(var(--card-bg-rgb));
   padding: 16px;
   border-radius: 6px;
+  .articleInfo {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row-reverse;
+  }
   .mainContents {
     margin-top: 1rem;
 
