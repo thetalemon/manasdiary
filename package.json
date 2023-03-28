@@ -10,6 +10,7 @@
     "lint:markup": "markuplint **/*.tsx",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "setup-storybook": "npx http-server storybook-static",
     "vrt": "playwright test",
     "vrt:update": "playwright test -u"
   },
