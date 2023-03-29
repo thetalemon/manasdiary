@@ -1,0 +1,19 @@
+.articleInfo {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.mainContents {
+  margin-top: 1rem;
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  img {
+    max-height: 400px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}

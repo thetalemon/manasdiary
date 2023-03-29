@@ -14,4 +14,5 @@ const Template: ComponentStory<typeof Frame> = (args) => <Frame {...args} />
 export const Primary = Template.bind({})
 Primary.args = {
   children: <div>aaa</div>,
+  dense: true,
 }

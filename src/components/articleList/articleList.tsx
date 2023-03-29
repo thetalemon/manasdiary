@@ -14,7 +14,7 @@ export function ArticleList({ artcileList }: Props) {
       {artcileList.map((article) => {
         return (
           <li key={article._id} className={styles.articleListItem}>
-            <Frame>
+            <Frame dense>
               <Link href={`/articles/${article.slug}`}>
                 <p className={styles.cardTitle}>
                   {article.icon.value} {article.title}

@@ -1,9 +1,8 @@
-import styles from '@/styles/Home.module.scss'
 import { getArticles, getArticleBySlug } from '@/lib/newt'
 import type { Article } from '@/types/article'
 import { DefaultLayout } from '@/src/layouts/defaultLayout'
 import { myUrl, mySiteName } from '@/constants/constants'
-import { TagList } from '@/src/components/tagList/tagList'
+import { ArticleBody } from '@/src/components/articleBody/articleBody'
 
 export default function Article({ article }: { article: Article }) {
   return (
@@ -13,17 +12,7 @@ export default function Article({ article }: { article: Article }) {
         description={article.summary}
         url={`${myUrl}/articles/${article.slug}`}
       >
-        <section className={styles.articleMain}>
-          <h1>
-            {article.icon.value} {article.title}
-          </h1>
-          <section className={styles.articleInfo}>
-            <TagList tags={article.tags} />
-          </section>
-          <section className={styles.mainContents}>
-            <div dangerouslySetInnerHTML={{ __html: article.body }} />
-          </section>
-        </section>
+        <ArticleBody article={article} />
       </DefaultLayout>
     </>
   )
