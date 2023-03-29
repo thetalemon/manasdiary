@@ -1,4 +1,3 @@
-import styles from '@/styles/Home.module.scss'
 import { getTags, getArticleByTag, getTagBySlug } from '@/lib/newt'
 import type { Article, Tag } from '@/types/article'
 import { DefaultLayout } from '@/src/layouts/defaultLayout'
@@ -24,9 +23,7 @@ export default function Article({
         url={myUrl}
       >
         <h2>#{tag.name}</h2>
-        <section className={styles.mainContents}>
-          <ArticleList artcileList={articles} />
-        </section>
+        <ArticleList artcileList={articles} />
       </DefaultLayout>
     </>
   )

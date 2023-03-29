@@ -1,4 +1,3 @@
-import styles from '@/styles/Home.module.scss'
 import { getArticles } from '@/lib/newt'
 import type { Article } from '@/types/article'
 import { DefaultLayout } from '@/src/layouts/defaultLayout'
@@ -18,9 +17,7 @@ export default function Home({ articles }: { articles: Article[] }) {
         url={myUrl}
       >
         <h1>{mySiteName}</h1>
-        <section className={styles.mainContents}>
-          <ArticleList artcileList={articles} />
-        </section>
+        <ArticleList artcileList={articles} />
       </DefaultLayout>
     </>
   )
