@@ -1,13 +1,19 @@
 import { Feed } from 'feed'
 import { getArticles } from '@/lib/newt'
-import { myUrl, myName, mySiteName, myCopyLight } from '@/constants/constants'
+import {
+  myUrl,
+  myName,
+  mySiteName,
+  myCopyLight,
+  mySiteDefaultDescription,
+} from '@/constants/constants'
 
 export const generateFeed = async () => {
   const baseUrl = myUrl
 
   const feed = new Feed({
     title: mySiteName,
-    description: '',
+    description: mySiteDefaultDescription,
     id: baseUrl,
     link: baseUrl,
     language: 'ja',
