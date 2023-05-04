@@ -16,6 +16,10 @@ interface Props {
   children: ReactNode
 }
 
+function createTitle(title: string) {
+  return title === mySiteName ? title : `${title} | ${mySiteName}`
+}
+
 export function DefaultLayout({ title, description, children, url }: Props) {
   const [path, setPath] = useState('')
 
@@ -28,7 +32,7 @@ export function DefaultLayout({ title, description, children, url }: Props) {
       <Head>
         <meta name='viewport' content='width=device-width' />
         <link rel='icon' type='image/svg+xml' href='/mylogo.ico' />
-        <meta property='og:site_name' content={mySiteName} />
+        <meta property='og:site_name' content={createTitle(title)} />
         <meta property='og:title' content={title} />
         <meta property='og:url' content={url} />
         <meta property='og:description' content={description} />
@@ -36,9 +40,9 @@ export function DefaultLayout({ title, description, children, url }: Props) {
         <meta name='twitter:card' content='summary' />
         <meta name='twitter:site' content='@thetalemon' />
         <meta name='twitter:domain' content={myDomain} />
-        <meta name='twitter:title' content={title} />
+        <meta name='twitter:title' content={createTitle(title)} />
         <meta name='twitter:image' content={`${myUrl}/api/og?title=${title}`} />
-        <title>{title}</title>
+        <title>{createTitle(title)}</title>
         <meta name='description' content={description} />
       </Head>
       <header>

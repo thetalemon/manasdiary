@@ -18,7 +18,7 @@ export default function Article({
   return (
     <>
       <DefaultLayout
-        title={mySiteName}
+        title={`${tag.name}の記事一覧`}
         description={mySiteDefaultDescription}
         url={myUrl}
       >

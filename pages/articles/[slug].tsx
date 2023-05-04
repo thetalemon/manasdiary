@@ -8,7 +8,7 @@ export default function Article({ article }: { article: Article }) {
   return (
     <>
       <DefaultLayout
-        title={`${article.title} | ${mySiteName}`}
+        title={`${article.title}`}
         description={article.summary}
         url={`${myUrl}/articles/${article.slug}`}
       >
