@@ -12,7 +12,16 @@ export const getArticles = async () => {
     appUid: 'manas-diary',
     modelUid: 'article',
     query: {
-      select: ['_id', 'title', 'slug', 'tags', 'body', 'icon', 'summary'],
+      select: [
+        '_id',
+        'title',
+        'slug',
+        'tags',
+        'body',
+        'icon',
+        'summary',
+        'publishDate',
+      ],
     },
   })
   return items
@@ -24,7 +33,16 @@ export const getArticleBySlug = async (slug: string) => {
     modelUid: 'article',
     query: {
       slug,
-      select: ['_id', 'title', 'slug', 'tags', 'body', 'icon', 'summary'],
+      select: [
+        '_id',
+        'title',
+        'slug',
+        'tags',
+        'body',
+        'icon',
+        'summary',
+        'publishDate',
+      ],
     },
   })
   return article
