@@ -4,11 +4,11 @@ import { TagList } from '../tagList/tagList'
 import { Frame } from '../frame/frame'
 import { format } from 'date-fns'
 
-interface Props {
+export interface ArticleBodyProps {
   article: Article
 }
 
-export function ArticleBody({ article }: Props) {
+export function ArticleBody({ article }: ArticleBodyProps) {
   return (
     <Frame>
       <h1>

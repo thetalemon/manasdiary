@@ -1,5 +1,5 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react'
-import { ArticleList } from './articleList'
+import { StoryObj, Meta } from '@storybook/react'
+import { ArticleList, ArticleListProps } from './articleList'
 
 export default {
   title: 'Components/ArticleList',
@@ -7,9 +7,9 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-} as ComponentMeta<typeof ArticleList>
+} as Meta<typeof ArticleList>
 
-const Template: ComponentStory<typeof ArticleList> = (args) => (
+const Template: StoryObj<typeof ArticleList> = (args: ArticleListProps) => (
   <ArticleList {...args} />
 )
 
@@ -36,7 +36,7 @@ Primary.args = {
           slug: 'tag2',
         },
       ],
-      publishDate: 'たいとる',
+      publishDate: '2022-04-01T00:00:00.000Z',
     },
   ],
 }

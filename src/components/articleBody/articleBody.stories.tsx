@@ -1,5 +1,5 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react'
-import { ArticleBody } from './articleBody'
+import { StoryObj, Meta } from '@storybook/react'
+import { ArticleBody, ArticleBodyProps } from './articleBody'
 
 export default {
   title: 'Components/ArticleBody',
@@ -7,9 +7,9 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-} as ComponentMeta<typeof ArticleBody>
+} as Meta<typeof ArticleBody>
 
-const Template: ComponentStory<typeof ArticleBody> = (args) => (
+const Template: StoryObj<typeof ArticleBody> = (args: ArticleBodyProps) => (
   <ArticleBody {...args} />
 )
 
@@ -35,6 +35,6 @@ Primary.args = {
         slug: 'tag2',
       },
     ],
-    publishDate: 'たいとる',
+    publishDate: '2022-04-01T00:00:00.000Z',
   },
 }

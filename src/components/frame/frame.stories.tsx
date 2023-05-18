@@ -1,5 +1,5 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react'
-import { Frame } from './frame'
+import { StoryObj, Meta } from '@storybook/react'
+import { Frame, FrameProps } from './frame'
 
 export default {
   title: 'Components/Frame',
@@ -7,9 +7,11 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-} as ComponentMeta<typeof Frame>
+} as Meta<typeof Frame>
 
-const Template: ComponentStory<typeof Frame> = (args) => <Frame {...args} />
+const Template: StoryObj<typeof Frame> = (args: FrameProps) => (
+  <Frame {...args} />
+)
 
 export const Primary = Template.bind({})
 Primary.args = {

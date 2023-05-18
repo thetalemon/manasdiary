@@ -2,11 +2,11 @@ import type { Tag } from '@/types/article'
 import styles from './tagList.module.scss'
 import Link from 'next/link'
 
-interface Props {
+export interface TagListProps {
   tags: Tag[]
 }
 
-export function TagList({ tags }: Props) {
+export function TagList({ tags }: TagListProps) {
   return (
     <ul className={styles.root}>
       {tags.map((tag) => {

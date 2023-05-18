@@ -1,6 +1,5 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react'
-
-import { TagList } from './tagList'
+import { StoryObj, Meta } from '@storybook/react'
+import { TagList, TagListProps } from './tagList'
 
 export default {
   title: 'Components/TagList',
@@ -8,9 +7,11 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-} as ComponentMeta<typeof TagList>
+} as Meta<typeof TagList>
 
-const Template: ComponentStory<typeof TagList> = (args) => <TagList {...args} />
+const Template: StoryObj<typeof TagList> = (args: TagListProps) => (
+  <TagList {...args} />
+)
 
 export const Primary = Template.bind({})
 Primary.args = {

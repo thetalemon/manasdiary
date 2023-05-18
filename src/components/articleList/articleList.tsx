@@ -4,11 +4,11 @@ import Link from 'next/link'
 import { TagList } from '../tagList/tagList'
 import { Frame } from '../frame/frame'
 
-interface Props {
+export interface ArticleListProps {
   artcileList: Article[]
 }
 
-export function ArticleList({ artcileList }: Props) {
+export function ArticleList({ artcileList }: ArticleListProps) {
   return (
     <ul className={styles.articleList}>
       {artcileList.map((article) => {
