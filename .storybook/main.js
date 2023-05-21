@@ -10,26 +10,6 @@ module.exports = {
       options: {},
     },
   ],
-  // webpackFinal: async (config) => {
-  //   config.module.rules.push({
-  //     test: /\.scss$/,
-  //     use: [
-  //       'style-loader',
-  //       {
-  //         loader: 'css-loader',
-  //         options: {
-  //           modules: {
-  //             auto: true,
-  //           },
-  //         },
-  //       },
-  //       'sass-loader',
-  //     ],
-  //     include: path.resolve(__dirname, '../'),
-  //   })
-  //   config.resolve.roots = [path.resolve(__dirname, '../src'), 'node_modules']
-  //   return config
-  // },
   framework: {
     name: '@storybook/nextjs',
     options: {},
