@@ -1,5 +1,5 @@
-import { StoryObj, Meta } from '@storybook/react'
-import { ArticleList, ArticleListProps } from './articleList'
+import { Meta } from '@storybook/react'
+import { ArticleList } from './articleList'
 
 export default {
   title: 'Components/ArticleList',
@@ -9,12 +9,7 @@ export default {
   },
 } as Meta<typeof ArticleList>
 
-const Template: StoryObj<typeof ArticleList> = (args: ArticleListProps) => (
-  <ArticleList {...args} />
-)
-
-export const Primary = Template.bind({})
-Primary.args = {
+export const Primary = {
   artcileList: [
     {
       _id: '01',

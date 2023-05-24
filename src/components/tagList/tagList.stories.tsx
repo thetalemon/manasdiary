@@ -1,5 +1,5 @@
-import { StoryObj, Meta } from '@storybook/react'
-import { TagList, TagListProps } from './tagList'
+import { Meta } from '@storybook/react'
+import { TagList } from './tagList'
 
 export default {
   title: 'Components/TagList',
@@ -9,12 +9,7 @@ export default {
   },
 } as Meta<typeof TagList>
 
-const Template: StoryObj<typeof TagList> = (args: TagListProps) => (
-  <TagList {...args} />
-)
-
-export const Primary = Template.bind({})
-Primary.args = {
+export const Primary = {
   tags: [
     {
       name: 'tag1',

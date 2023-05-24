@@ -1,5 +1,5 @@
-import { StoryObj, Meta } from '@storybook/react'
-import { Frame, FrameProps } from './frame'
+import { Meta } from '@storybook/react'
+import { Frame } from './frame'
 
 export default {
   title: 'Components/Frame',
@@ -9,12 +9,7 @@ export default {
   },
 } as Meta<typeof Frame>
 
-const Template: StoryObj<typeof Frame> = (args: FrameProps) => (
-  <Frame {...args} />
-)
-
-export const Primary = Template.bind({})
-Primary.args = {
+export const Primary = {
   children: <div>aaa</div>,
   dense: true,
 }
