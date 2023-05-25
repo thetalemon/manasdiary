@@ -1,11 +1,7 @@
 import { getTags, getArticleByTag, getTagBySlug } from '@/lib/newt'
 import type { Article, Tag } from '@/types/article'
 import { DefaultLayout } from '@/src/layouts/defaultLayout'
-import {
-  myUrl,
-  mySiteDefaultDescription,
-  mySiteName,
-} from '@/constants/constants'
+import { myUrl, mySiteDefaultDescription } from '@/constants/constants'
 import { ArticleList } from '@/src/components/articleList/articleList'
 
 export default function Article({
@@ -47,8 +43,14 @@ export const getStaticProps = async ({
   params: { slug: string }
 }) => {
   const { slug } = params
-  const articles = await getArticleByTag(slug)
   const tag = await getTagBySlug(slug)
+  if (!tag) {
+    //404にしたい
+    return {
+      notFound: true,
+    }
+  }
+  const articles = await getArticleByTag(tag?._id)
   return {
     props: {
       articles,
