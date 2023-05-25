@@ -71,14 +71,14 @@ export const getTagBySlug = async (slug: string) => {
   return item
 }
 
-export const getArticleByTag = async (id: string) => {
+export const getArticleByTag = async (tagId: string) => {
   const { items } = await client.getContents<Article>({
     appUid: 'manas-diary',
     modelUid: 'article',
     query: {
       select: ['_id', 'title', 'slug', 'tags', 'body', 'icon', 'summary'],
       tags: {
-        in: [id],
+        in: [tagId],
       },
     },
   })
