@@ -10,14 +10,16 @@ export default {
 } as Meta<typeof TagList>
 
 export const Primary = {
-  tags: [
-    {
-      name: 'tag1',
-      slug: 'tag1',
-    },
-    {
-      name: 'tag2',
-      slug: 'tag2',
-    },
-  ],
+  args: {
+    tags: [
+      {
+        name: 'tag1',
+        slug: 'tag1',
+      },
+      {
+        name: 'tag2',
+        slug: 'tag2',
+      },
+    ],
+  },
 }

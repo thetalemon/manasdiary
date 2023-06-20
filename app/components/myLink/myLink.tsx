@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+
+import { usePathname } from 'next/navigation'
 
 interface Props {
   href: string
@@ -7,8 +8,7 @@ interface Props {
 }
 
 export function MyLink({ href, text }: Props) {
-  const router = useRouter()
-  const path = router.asPath
+  const path = usePathname()
 
   return path !== href ? <Link href={href}>{text}</Link> : <p>{text}</p>
 }

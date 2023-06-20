@@ -10,6 +10,8 @@ export default {
 } as Meta<typeof Frame>
 
 export const Primary = {
-  children: <div>aaa</div>,
-  dense: true,
+  args: {
+    children: <div>aaa</div>,
+    dense: true,
+  },
 }
