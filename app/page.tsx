@@ -43,11 +43,7 @@ export default async function Home() {
   const articles: Article[] = await getArticles()
   return (
     <>
-      <DefaultLayout
-        title={mySiteName}
-        description={mySiteDefaultDescription}
-        url={myUrl}
-      >
+      <DefaultLayout>
         <h1>{mySiteName}</h1>
         <ArticleList artcileList={articles} />
       </DefaultLayout>
