@@ -1,11 +1,9 @@
+'use client'
+
 import { getTags, getArticleByTag, getTagBySlug } from '@/lib/newt'
-import type { Article, Tag } from '@/types/article'
+import type { Article } from '@/types/article'
 import { DefaultLayout } from '@/app/components/layouts/defaultLayout'
-import {
-  myUrl,
-  mySiteDefaultDescription,
-  mySiteName,
-} from '@/constants/constants'
+import { myUrl, mySiteName } from '@/constants/constants'
 import { ArticleList } from '@/app/components/articleList/articleList'
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'

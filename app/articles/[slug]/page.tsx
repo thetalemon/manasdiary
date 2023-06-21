@@ -1,3 +1,5 @@
+'use client'
+
 import { getArticles, getArticleBySlug } from '@/lib/newt'
 import type { Article } from '@/types/article'
 import { DefaultLayout } from '@/app/components/layouts/defaultLayout'
