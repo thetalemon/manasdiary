@@ -1,5 +1,3 @@
-'use client'
-
 import { getTags, getArticleByTag, getTagBySlug } from '@/lib/newt'
 import type { Article } from '@/types/article'
 import { DefaultLayout } from '@/app/components/layouts/defaultLayout'
