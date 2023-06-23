@@ -1,20 +1,13 @@
-import { GetServerSidePropsContext } from 'next'
+import { NextApiHandler } from 'next'
 import { generateFeed } from '@/lib/feed'
 
-export const getServerSideProps = async ({
-  res,
-}: GetServerSidePropsContext) => {
+export const handler: NextApiHandler = async (req, res) => {
   const xml = await generateFeed()
 
   res.statusCode = 200
   res.setHeader('Cache-Control', 's-maxage=86400, stale-while-revalidate')
   res.setHeader('Content-Type', 'text/xml')
   res.end(xml)
-
-  return {
-    props: {},
-  }
 }
 
-const Page = () => null
-export default Page
+export default handler
