@@ -36,13 +36,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: mySiteName,
       locale: 'ja_JP',
       type: 'website',
+      images: [`${myUrl}/api/og?title=${tag.name}の記事一覧`],
     },
     twitter: {
       card: 'summary',
-      title: `${tag.name} | @{mySiteName}`,
+      title: `${tag.name} | ${mySiteName}`,
       description: `${tag.name}の記事一覧`,
       site: '@thetalemon',
       creator: '@thetalemon',
+      images: [`${myUrl}/api/og?title=${tag.name}の記事一覧`],
     },
     alternates: {
       canonical: `${myUrl}/tags/${tag.slug}`,
