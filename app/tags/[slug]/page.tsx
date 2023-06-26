@@ -2,6 +2,7 @@ import { getTags, getArticleByTag, getTagBySlug } from '@/lib/newt'
 import type { Article } from '@/types/article'
 import { DefaultLayout } from '@/app/components/layouts/defaultLayout'
 import { myUrl, mySiteName } from '@/constants/constants'
+import { createTitle, createOgImgUrl } from '@/app/util/metadata'
 import { ArticleList } from '@/app/components/articleList/articleList'
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
@@ -26,28 +27,33 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const tag = await getTagBySlug(slug)
   if (!tag) return {}
 
+  const title = createTitle(tag.name)
+  const ogTitle = `${tag.name}の記事一覧`
+  const description = `${tag.name}の記事一覧`
+  const thisPageUrl = `${myUrl}/tags/${tag.slug}`
+
   const metadata: Metadata = {
-    title: `${tag.name}の記事一覧 | ${mySiteName}`,
-    description: `${tag.name}の記事一覧`,
+    title: title,
+    description: description,
     openGraph: {
-      title: `${tag.name} | ${mySiteName}`,
-      description: `${tag.name}の記事一覧`,
-      url: `${myUrl}/tags/${tag.slug}`,
+      title: title,
+      description: description,
+      url: thisPageUrl,
       siteName: mySiteName,
       locale: 'ja_JP',
       type: 'website',
-      images: [`${myUrl}/api/og?title=${tag.name}の記事一覧`],
+      images: [createOgImgUrl(ogTitle)],
     },
     twitter: {
       card: 'summary',
-      title: `${tag.name} | ${mySiteName}`,
-      description: `${tag.name}の記事一覧`,
+      title: title,
+      description: description,
       site: '@thetalemon',
       creator: '@thetalemon',
-      images: [`${myUrl}/api/og?title=${tag.name}の記事一覧`],
+      images: [createOgImgUrl(ogTitle)],
     },
     alternates: {
-      canonical: `${myUrl}/tags/${tag.slug}`,
+      canonical: thisPageUrl,
     },
   }
 
