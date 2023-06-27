@@ -1,6 +1,5 @@
 import { getArticles } from '@/lib/newt'
 import type { Article } from '@/types/article'
-import { DefaultLayout } from '@/app/components/layouts/defaultLayout'
 import { ArticleList } from '@/app/components/articleList/articleList'
 import {
   myUrl,
@@ -43,10 +42,8 @@ export default async function Home() {
   const articles: Article[] = await getArticles()
   return (
     <>
-      <DefaultLayout>
-        <h1>{mySiteName}</h1>
-        <ArticleList artcileList={articles} />
-      </DefaultLayout>
+      <h1>{mySiteName}</h1>
+      <ArticleList artcileList={articles} />
     </>
   )
 }

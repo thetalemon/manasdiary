@@ -1,6 +1,5 @@
 import { getTags, getArticleByTag, getTagBySlug } from '@/lib/newt'
 import type { Article } from '@/types/article'
-import { DefaultLayout } from '@/app/components/layouts/defaultLayout'
 import { myUrl, mySiteName } from '@/constants/constants'
 import { createTitle, createOgImgUrl } from '@/app/util/metadata'
 import { ArticleList } from '@/app/components/articleList/articleList'
@@ -71,10 +70,8 @@ export default async function Article({
   const articles = await getArticleByTag(tag?._id)
   return (
     <>
-      <DefaultLayout>
-        <h2>#{tag.name}</h2>
-        <ArticleList artcileList={articles} />
-      </DefaultLayout>
+      <h2>#{tag.name}</h2>
+      <ArticleList artcileList={articles} />
     </>
   )
 }

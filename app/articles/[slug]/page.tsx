@@ -1,6 +1,5 @@
 import { getArticles, getArticleBySlug } from '@/lib/newt'
 import type { Article } from '@/types/article'
-import { DefaultLayout } from '@/app/components/layouts/defaultLayout'
 import { myUrl, mySiteName } from '@/constants/constants'
 import { ArticleBody } from '@/app/components/articleBody/articleBody'
 import { Metadata } from 'next'
@@ -63,11 +62,5 @@ export default async function Article({
 
   if (!article) notFound()
 
-  return (
-    <>
-      <DefaultLayout>
-        <ArticleBody article={article} />
-      </DefaultLayout>
-    </>
-  )
+  return <ArticleBody article={article} />
 }

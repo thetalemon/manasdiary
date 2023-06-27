@@ -1,11 +1,16 @@
-import { ReactNode } from 'react'
+'use client'
+
+import { ReactNode, useEffect, useState } from 'react'
 import {
   myUrl,
   mySiteName,
   mySiteDefaultDescription,
+  myMainUrl,
+  myCopyLight,
 } from '@/constants/constants'
 import './globals.scss'
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export async function generateMetadata(): Promise<Metadata> {
   const metadata: Metadata = {
@@ -38,9 +43,26 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  const [path, setPath] = useState('')
+
+  useEffect(() => {
+    setPath(location.pathname)
+  }, [])
   return (
     <html lang='ja'>
-      <body>{children}</body>
+      <body>
+        <header>
+          {path !== '/' ? (
+            <Link href='/'>{mySiteName}</Link>
+          ) : (
+            <h1>{mySiteName}</h1>
+          )}
+        </header>
+        <main>{children}</main>
+        <footer>
+          <Link href={myMainUrl}>{myCopyLight}</Link>
+        </footer>
+      </body>
     </html>
   )
 }
