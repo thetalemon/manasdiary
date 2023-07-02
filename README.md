@@ -1,5 +1,6 @@
 # manas diary
-manasasの雑記ブログです
+
+manasas の雑記ブログです
 
 ## Getting Started
 
