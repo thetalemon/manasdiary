@@ -12,34 +12,30 @@ import './globals.scss'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
-export async function generateMetadata(): Promise<Metadata> {
-  const metadata: Metadata = {
-    title: {
-      default: mySiteName,
-      template: `%s - ${mySiteName}`,
-    },
+export const metadata: Metadata = {
+  title: {
+    default: mySiteName,
+    template: `%s - ${mySiteName}`,
+  },
+  description: mySiteDefaultDescription,
+  openGraph: {
+    title: mySiteName,
     description: mySiteDefaultDescription,
-    openGraph: {
-      title: mySiteName,
-      description: mySiteDefaultDescription,
-      url: myUrl,
-      siteName: mySiteName,
-      locale: 'ja_JP',
-      type: 'website',
-    },
-    twitter: {
-      card: 'summary',
-      title: mySiteName,
-      description: mySiteDefaultDescription,
-      site: '@thetalemon',
-      creator: '@thetalemon',
-    },
-    alternates: {
-      canonical: myUrl,
-    },
-  }
-
-  return metadata
+    url: myUrl,
+    siteName: mySiteName,
+    locale: 'ja_JP',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: mySiteName,
+    description: mySiteDefaultDescription,
+    site: '@thetalemon',
+    creator: '@thetalemon',
+  },
+  alternates: {
+    canonical: myUrl,
+  },
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
