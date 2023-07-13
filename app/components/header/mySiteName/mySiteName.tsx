@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { mySiteName } from '@/constants/constants'
-import './globals.scss'
+import '@/app/globals.scss'
 import Link from 'next/link'
 
 export default function MySiteName() {
